@@ -1,7 +1,6 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Cabecalho from '@/components/Cabecalho/Cabecalho'
-import Body from '@/components/Body/Body'
 import Rodape from '@/components/Rodape/Rodape'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,13 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body className={inter.className}>
-        
         <Cabecalho/>
 
-        <Body/>
-        
-        {/* {children} */}
-        
+        {children}
+
         <Rodape/>
         </body>
     </html>
